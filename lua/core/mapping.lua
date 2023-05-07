@@ -53,6 +53,7 @@ local core_map = {
 	["v|K"] = map_cmd(":m '<-2<CR>gv=gv"):with_desc("edit: Move this line up"),
 	["v|<"] = map_cmd("<gv"):with_desc("edit: Decrease indent"),
 	["v|>"] = map_cmd(">gv"):with_desc("edit: Increase indent"),
+	["v|<C-c>"] = map_cmd('"+y'):with_desc("edit: Copy to system clipboard"),
 }
 
 bind.nvim_load_mapping(core_map)

@@ -36,7 +36,7 @@ return function()
 			local bind = require("keymap.bind")
 
 			bind.nvim_load_mapping({
-				["n|]g"] = bind.map_callback(function()
+				["n|]c"] = bind.map_callback(function()
 					if vim.wo.diff then
 						return "]g"
 					end
@@ -48,7 +48,7 @@ return function()
 					:with_buffer(bufnr)
 					:with_expr()
 					:with_desc("git: Goto next hunk"),
-				["n|[g"] = bind.map_callback(function()
+				["n|[c"] = bind.map_callback(function()
 					if vim.wo.diff then
 						return "[g"
 					end
@@ -107,7 +107,7 @@ return function()
 			})
 		end,
 		watch_gitdir = { interval = 1000, follow_files = true },
-		current_line_blame = true,
+		current_line_blame = false, -- [N] Shut down line blame
 		current_line_blame_opts = { delay = 1000, virtual_text_pos = "eol" },
 		sign_priority = 6,
 		update_debounce = 100,

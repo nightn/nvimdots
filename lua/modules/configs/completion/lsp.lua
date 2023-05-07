@@ -11,6 +11,10 @@ return function()
 	}
 
 	mason.setup({
+		-- [N] download from local server, example: 8080/clangd/clangd/16.0.2/clangd-linux-16.0.2.zip
+		-- github = {
+		-- 	download_url_template = "http://192.168.56.1:8080/%s/%s/%s",
+		-- },
 		ui = {
 			border = "rounded",
 			icons = {
